@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from blog.forms import PostForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def post_list(request):
@@ -63,4 +64,20 @@ def post_publish(request, pk):
 def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
+    return redirect('post_list')
+
+
+def login(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        return redirect('post_list')
+    else:
+        return redirect('login')
+
+
+def logout(request):
+    logout(request)
     return redirect('post_list')
