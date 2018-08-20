@@ -55,7 +55,9 @@ h1, h2, h3, h4 {
     letter-spacing: 0.5px;
 }
 .post h1 a:hover {
-    color: #eff0e4;
+    color: #281b29;
+    text-decoration: none;
+    letter-spacing: 2px;
 }
 
 .post p {
@@ -71,5 +73,11 @@ h1, h2, h3, h4 {
 
 #published {
     color: #828282;
+    font-size: 14px;
+}
+
+#author {
+    color: #828282;
     font-size: 12px;
+    margin-left: 20px;
 }
