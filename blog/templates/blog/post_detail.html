@@ -12,5 +12,9 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <br>
+        <p id="author"><b>__</b> {{ post.author }}</p>
+        <br>
+        <a class="btn btn-default" href="{% url 'post_list' %}">Home</a>
     </div>
 {% endblock %}
