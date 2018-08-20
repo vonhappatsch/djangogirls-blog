@@ -37,11 +37,15 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+.top-menu {
+    color: #fdfff0;
     float: right;
-    font-size: 26pt;
+    font-size: 18pt;
     margin-right: 20px;
+}
+
+.top-menu:hover, .top-menu:visited {
+    color: #828282;
 }
 
 .post {
@@ -89,4 +93,13 @@ h1, h2, h3, h4 {
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.login-name {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.login-name a, .login-name a:hover {
+    color: #828282;
 }
