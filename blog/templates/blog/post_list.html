@@ -8,7 +8,7 @@
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
-            <p id="author"><b>>></b> {{ post.author }}</p>
+            <p id="author"><b>__</b> {{ post.author }}</p>
             <hr>
         </div>
     {% endfor %}
