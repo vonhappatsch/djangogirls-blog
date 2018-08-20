@@ -83,10 +83,14 @@ h1, h2, h3, h4 {
     margin-left: 20px;
 }
 
-.btn, .btn a {
+.btn {
     color: #2e0f30;
     font-family: 'Calibri', sans-serif;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.btn a {
+    color: #2e0f30;
 }
