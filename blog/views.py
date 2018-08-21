@@ -65,19 +65,3 @@ def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
-
-
-def login(request):
-    username = request.POST['username']
-    password = request.POST['password']
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        return redirect('post_list')
-    else:
-        return redirect('login')
-
-
-def logout(request):
-    logout(request)
-    return redirect('post_list')
